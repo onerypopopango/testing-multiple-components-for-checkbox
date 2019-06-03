@@ -1,0 +1,21 @@
+<hello name="{{ name }}"></hello>
+
+<div>
+  <div>
+    <list-component [sort]="'firstOrders'" 
+      [ordersSelected]="ordersSelected"></list-component>
+  </div>
+
+  <br>
+
+  <div>
+    <list-component [sort]="'secondOrders'"
+      [ordersSelected]="ordersSelected"></list-component>
+  </div>
+</div>
+
+<br>
+
+<button (click)="check()">Check</button>
+
+<p>{{ currentChecked }}</p>

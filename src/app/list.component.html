@@ -1,0 +1,19 @@
+<table class="table">
+	<tbody>
+		<tr *ngFor="let order of orders">
+			<td style="text-align:center">
+				<div class="checkbox">
+					<label>
+            <input
+              type="checkbox"
+              value="{{ order.id }}"
+              (change)="onChange($event)"
+            />
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            {{ order.displayName }}
+          </label>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
