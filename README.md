@@ -1,3 +1,5 @@
 # Angular2+ Disabling checkboxes on multiple angular components once a limit is reached.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-5dyvgu)
+Done natively in Angular2+, no additional dependencies required.
+
+[StackBlitz link ⚡️](https://stackblitz.com/edit/angular-5dyvgu)
