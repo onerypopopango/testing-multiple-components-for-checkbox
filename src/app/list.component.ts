@@ -9,22 +9,21 @@ export class ListComponent implements OnInit {
   @Input() sort: string = "firstOrders";
   @Input() ordersSelected: number[] = [];
   @Input() disableCheckbox: boolean = false;
-  checkCurrent: number = 0;
 
   orders = [];
   firstOrders = [
-    { id: 1, displayName: 'order 1' },
-    { id: 2, displayName: 'order 2' },
-    { id: 3, displayName: 'order 3' },
-    { id: 4, displayName: 'order 4' },
-    { id: 5, displayName: 'order 5' }
+    { id: 1, displayName: 'Order 1' },
+    { id: 2, displayName: 'Order 2' },
+    { id: 3, displayName: 'Order 3' },
+    { id: 4, displayName: 'Order 4' },
+    { id: 5, displayName: 'Order 5' }
   ];
   secondOrders = [
-    { id: 6, displayName: 'order 6' },
-    { id: 7, displayName: 'order 7' },
-    { id: 8, displayName: 'order 8' },
-    { id: 9, displayName: 'order 9' },
-    { id: 10, displayName: 'order 10' }
+    { id: 6, displayName: 'Order 6' },
+    { id: 7, displayName: 'Order 7' },
+    { id: 8, displayName: 'Order 8' },
+    { id: 9, displayName: 'Order 9' },
+    { id: 10, displayName: 'Order 10' }
   ];
 
   getData() {
@@ -41,10 +40,8 @@ export class ListComponent implements OnInit {
 
   onChange(event: any) {
     if (event.srcElement.checked) {
-      this.checkCurrent++;
       this.ordersSelected.push(event.target.value);
     }else{
-      this.checkCurrent--;
       let index = this.ordersSelected.indexOf(event.target.value);
       this.ordersSelected.splice(index, 1);
     }

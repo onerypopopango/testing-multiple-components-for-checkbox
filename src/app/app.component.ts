@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Mortal';
+
   ordersSelected: number[] = [];
   currentChecked: number = 0;
   checkedLimit: number = 5;
@@ -15,7 +16,7 @@ export class AppComponent  {
   onChange() {
     this.currentChecked = this.ordersSelected.length;
 
-    if(this.ordersSelected.length >= 5){
+    if(this.ordersSelected.length >= this.checkedLimit){
       this.disableCheckbox = true;
     }else{
       this.disableCheckbox=false;
