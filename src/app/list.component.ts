@@ -6,8 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ["./list.component.css"]
 })
 export class ListComponent implements OnInit {
+  //diffrent parameters when called result in different data
   @Input() sort: string = "firstOrders";
+
+  //this is an array containing the selected order ids
   @Input() ordersSelected: number[] = [];
+
+  //this is a switch required for disabling/enabling checkboxes
   @Input() disableCheckbox: boolean = false;
 
   orders = [];
@@ -34,10 +39,12 @@ export class ListComponent implements OnInit {
     }
   };
 
+  //generates data on initialization
   ngOnInit() {
     this.getData();
   }
 
+  //adds or removes orders from ordersSelected array
   onChange(event: any) {
     if (event.srcElement.checked) {
       this.ordersSelected.push(event.target.value);
@@ -47,6 +54,7 @@ export class ListComponent implements OnInit {
     }
   }
 
+  //sets the [disabled] status of the html checkboxes
   getDisabledStatus(order):boolean {
     if(this.disableCheckbox == false){
       return false;
