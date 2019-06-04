@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   @Input() sort: string = "firstOrders";
   @Input() ordersSelected: number[] = [];
+  @Input() disableCheckbox: boolean = false;
   checkCurrent: number = 0;
 
   orders = [];
@@ -49,5 +50,15 @@ export class ListComponent implements OnInit {
     }
   }
 
-
+  getDisabledStatus(order):boolean {
+    if(this.disableCheckbox == false){
+      return false;
+    }else{
+      if( this.ordersSelected.indexOf(order.id.toString()) != -1 ){
+        return false;
+      }else {
+        return true;
+      }
+    }
+  }
 }

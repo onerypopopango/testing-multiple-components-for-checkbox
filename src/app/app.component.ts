@@ -10,9 +10,15 @@ export class AppComponent  {
   ordersSelected: number[] = [];
   currentChecked: number = 0;
   checkedLimit: number = 5;
-  
-  check() {
-    this.currentChecked = this.ordersSelected.length;
-  }
+  disableCheckbox: boolean = false;
 
+  onChange() {
+    this.currentChecked = this.ordersSelected.length;
+
+    if(this.ordersSelected.length >= 5){
+      this.disableCheckbox = true;
+    }else{
+      this.disableCheckbox=false;
+    }
+  }
 }

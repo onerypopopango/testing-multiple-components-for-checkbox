@@ -8,6 +8,7 @@
               type="checkbox"
               value="{{ order.id }}"
               (change)="onChange($event)"
+              [disabled]="getDisabledStatus(order)"
             />
             <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
             {{ order.displayName }}
