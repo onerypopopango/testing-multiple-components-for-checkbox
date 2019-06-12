@@ -2,4 +2,4 @@
 
 Done natively in Angular2+, no additional dependencies required.
 
-[StackBlitz link ⚡️](https://stackblitz.com/edit/angular-5dyvgu)
+[StackBlitz link ⚡️](https://stackblitz.com/edit/disabling-checkboxes-on-multiple-components-ng)
